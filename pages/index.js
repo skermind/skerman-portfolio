@@ -15,19 +15,12 @@ export default function Home() {
   return (
     <div
       className={`${geistSans.className} ${geistMono.className} font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center justify-center min-h-screen p-8 pb-20 gap-16 sm:p-20`}
-      style={{ backgroundColor: "#0f1117" }}
     >
       <main className="flex flex-col gap-[32px] row-start-2 items-center">
-        <h1
-          className="text-4xl font-bold mb-4"
-          style={{ color: "#1DB954" }}
-        >
+        <h1 className="text-4xl font-bold mb-4">
           Hi, I’m Daniel Skerman
         </h1>
-        <p
-          className="text-lg mb-6 text-center max-w-xl font-sans"
-          style={{ color: "#fcffe9" }}
-        >
+        <p className="text-lg mb-6 text-center max-w-xl font-sans">
           I’m a mathematics student working in data.
           <br />
           Welcome to my portfolio!
