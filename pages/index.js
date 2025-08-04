@@ -28,13 +28,13 @@ export default function Home() {
         <div className="flex gap-4">
           <a
             href="/projects"
-            className="bg-black text-white px-5 py-2 rounded-xl hover:bg-gray-800 transition"
+            className="bg-black text-[#fcffe9] px-5 py-2 rounded-xl transition hover:bg-[#1DB954] hover:text-[#fcffe9]"
           >
             View Projects
           </a>
           <a
             href="mailto:you@example.com"
-            className="bg-black text-white px-5 py-2 rounded-xl hover:bg-gray-800 transition"
+            className="bg-black text-[#fcffe9] px-5 py-2 rounded-xl transition hover:bg-[#1DB954] hover:text-[#fcffe9]"
           >
             Contact Me
           </a>
