@@ -84,13 +84,13 @@ export default function Projects() {
             <div className="mt-auto flex gap-3 w-full">
               <a
                 href={projects[index].link}
-                className={`${geistSans.className} bg-[#1DB954] text-[#fcffe9] flex-1 text-center px-5 py-2 rounded-xl transition transform hover:scale-110 hover:bg-[#1DB954] hover:text-[#fcffe9]`}
+                className={`bg-[#1DB954] text-[#fcffe9] flex-1 text-center px-5 py-2 rounded-xl transition transform hover:scale-110 hover:bg-[#1DB954] hover:text-[#fcffe9]`}
               >
                 {projects[index].linkText}
               </a>
               <a
                 href={projects[index].moreInfo}
-                className={`${geistSans.className} bg-black text-[#fcffe9] flex-1 text-center px-5 py-2 rounded-xl transition hover:bg-[#1DB954] hover:text-[#fcffe9]`}
+                className={`bg-black text-[#fcffe9] flex-1 text-center px-5 py-2 rounded-xl transition hover:bg-[#1DB954] hover:text-[#fcffe9]`}
               >
                 {projects[index].moreInfoText}
               </a>
