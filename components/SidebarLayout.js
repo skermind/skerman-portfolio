@@ -8,12 +8,19 @@ const geistMono = Geist_Mono({
 });
 
 export default function SidebarLayout({ children }) {
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(false); // start hidden
+  const [projectsOpen, setProjectsOpen] = useState(false);
+
   const navLinks = [
     { href: "/", label: "Home", icon: <Home size={18} /> },
     { href: "/projects", label: "Projects", icon: <Grid size={18} /> },
     { href: "/about", label: "About", icon: <Info size={18} /> },
     { href: "/contact", label: "Contact", icon: <Mail size={18} /> },
+  ];
+
+  const projectLinks = [
+    { href: "/projects/postertoplaylist", label: "PosterToPlaylist" },
+    { href: "/projects", label: "See More..." },
   ];
 
   return (
@@ -33,18 +40,57 @@ export default function SidebarLayout({ children }) {
         </button>
 
         <nav className="flex flex-col gap-3 mt-4 w-full">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className={`flex items-center gap-2 px-2 py-1 rounded hover:bg-[#1DB954]/20 hover:text-[#1DB954] transition ${
-                sidebarOpen ? "justify-start" : "justify-center"
-              }`}
-            >
-              {link.icon}
-              {sidebarOpen && link.label}
-            </a>
-          ))}
+          {navLinks.map((link) => {
+            if (link.label === "Projects") {
+              return (
+                <div key={link.href} className="flex flex-col w-full">
+                  {sidebarOpen ? (
+                    <>
+                      <button
+                        onClick={() => setProjectsOpen(!projectsOpen)}
+                        className={`flex items-center gap-2 px-2 py-1 w-full rounded transition justify-start ${
+                          projectsOpen ? "bg-[#1DB954] text-black" : "hover:bg-[#1DB954]/20 hover:text-[#1DB954]"
+                        }`}
+                      >
+                        {link.icon}
+                        {link.label} <span className="ml-1">{projectsOpen ? "-" : "+"}</span>
+                      </button>
+
+                      {projectsOpen && (
+                        <div className="ml-6 mt-2 flex flex-col gap-1">
+                          {projectLinks.map((proj) => (
+                            <a key={proj.href} href={proj.href} className="hover:text-[#1DB954] transition px-1 py-0.5 rounded">
+                              {proj.label}
+                            </a>
+                          ))}
+                        </div>
+                      )}
+                    </>
+                  ) : (
+                    <a
+                      href={link.href}
+                      className="flex items-center justify-center w-full px-2 py-1 rounded hover:bg-[#1DB954]/20 hover:text-[#1DB954] transition"
+                    >
+                      {link.icon}
+                    </a>
+                  )}
+                </div>
+              );
+            }
+
+            return (
+              <a
+                key={link.href}
+                href={link.href}
+                className={`flex items-center gap-2 px-2 py-1 rounded hover:bg-[#1DB954]/20 hover:text-[#1DB954] transition ${
+                  sidebarOpen ? "justify-start" : "justify-center"
+                }`}
+              >
+                {link.icon}
+                {sidebarOpen && link.label}
+              </a>
+            );
+          })}
         </nav>
 
         {/* Footer */}
