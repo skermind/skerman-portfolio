@@ -19,8 +19,7 @@ export default function SidebarLayout({ children }) {
   ];
 
   const projectLinks = [
-    { href: "/projects/postertoplaylist", label: "PosterToPlaylist" },
-    { href: "/projects", label: "See More..." },
+    { href: "/projects/postertoplaylist", label: "PosterToPlaylist" }
   ];
 
   return (
@@ -46,15 +45,22 @@ export default function SidebarLayout({ children }) {
                 <div key={link.href} className="flex flex-col w-full">
                   {sidebarOpen ? (
                     <>
-                      <button
-                        onClick={() => setProjectsOpen(!projectsOpen)}
-                        className={`flex items-center gap-2 px-2 py-1 w-full rounded transition justify-start ${
-                          projectsOpen ? "bg-[#1DB954] text-black" : "hover:bg-[#1DB954]/20 hover:text-[#1DB954]"
-                        }`}
-                      >
-                        {link.icon}
-                        {link.label} <span className="ml-1">{projectsOpen ? "-" : "+"}</span>
-                      </button>
+                      <div className="flex items-center justify-between w-full">
+                        <a
+                          href={link.href}
+                          className="flex items-center gap-2 px-2 py-1 w-full rounded hover:bg-[#1DB954]/20 hover:text-[#1DB954] transition"
+                        >
+                          {link.icon}
+                          {link.label}
+                        </a>
+                        <button
+                          onClick={() => setProjectsOpen(!projectsOpen)}
+                          className="text-[#1DB954] px-2 py-1 rounded hover:bg-[#1DB954]/20 transition"
+                          aria-label="Toggle projects dropdown"
+                        >
+                          {projectsOpen ? "-" : "+"}
+                        </button>
+                      </div>
 
                       {projectsOpen && (
                         <div className="ml-6 mt-2 flex flex-col gap-1">
