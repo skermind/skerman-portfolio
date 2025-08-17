@@ -36,10 +36,10 @@ export default function Home() {
               View Projects
             </a>
             <a
-              href="mailto:you@example.com"
+              href="/about"
               className="bg-black text-[#fcffe9] px-6 py-3 rounded-xl transition hover:bg-[#1DB954] hover:text-[#fcffe9]"
             >
-              Contact Me
+              About Me
             </a>
           </div>
         </div>

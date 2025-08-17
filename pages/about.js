@@ -52,7 +52,7 @@ export default function About() {
             </p>
 
             <p>
-                Outside of work, I enjoy cycling, playing guitar, and losing at <strong>Magic: The Gathering</strong> 😉. These activities allow me to unwind, connect with others, and keep a balance alongside my analytical pursuits.
+                Outside of work, I enjoy cycling, playing guitar, and losing at Magic: The Gathering 😉.
             </p>
 
             <p>
