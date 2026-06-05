@@ -8,9 +8,9 @@ export default function About() {
   return (
     <SidebarLayout>
         <main className={`${geistSans.className} ${geistMono.className} min-h-screen bg-[#0f1117] text-[#fcffe9] p-8`}>
-        <div className="max-w-4xl mx-auto space-y-6 flex flex-col md:flex-row md:items-start md:gap-8">
-            {/* Photo & Skills */}
-            <div className="flex-shrink-0">
+        <div className="max-w-4xl mx-auto flex flex-col md:flex-row md:items-start md:gap-12">
+            {/* Photo & Skills Sidebar */}
+            <div className="flex-shrink-0 md:sticky md:top-8">
             <img 
                 src="/images/daniel.png" 
                 alt="Daniel Skerman" 
@@ -18,7 +18,7 @@ export default function About() {
             />
 
             {/* Skills grid */}
-            <div className="grid grid-cols-2 gap-4 mt-6">
+            <div className="grid grid-cols-2 gap-4 mt-8">
                 {[
                 { src: "/images/MathsLogo.svg", label: "Maths" },
                 { src: "/images/PythonLogo.svg", label: "Python" },
@@ -35,29 +35,70 @@ export default function About() {
             </div>
             </div>
 
-            {/* Text */}
-            <div className="flex-1 space-y-4">
-            <h1 className="text-4xl font-bold mb-4">About Me</h1>
+            {/* Content Sections */}
+            <div className="flex-1 space-y-10">
+            <div>
+              <h1 className="text-5xl font-bold mb-2">About Me</h1>
+              <div className="w-16 h-1 bg-gradient-to-r from-[#1DB954] to-transparent"></div>
+            </div>
 
-            <p>
-                Hello! I'm <strong>Daniel Skerman</strong>, an aspiring mathematician and data analyst with a love for coding and problem-solving. Originally from The West Midlands, I grew up understanding the value of perseverance and curiosity, which has shaped my approach to both learning and work. 
-            </p>
+            {/* Background Section */}
+            <section className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-6 border border-gray-700">
+              <h2 className="text-2xl font-bold text-[#1DB954] mb-4">Background</h2>
+              <p className="leading-relaxed text-gray-100">
+                Hello! I'm <strong>Daniel Skerman</strong>, an aspiring mathematician and data analyst with a love for coding and problem-solving. Originally from The West Midlands, I grew up understanding the value of perseverance and curiosity, which has shaped my approach to both learning and work.
+              </p>
+            </section>
 
-            <p>
-                My academic journey led me to Aberystwyth University, where I earned a <strong>BSc in Mathematics with First-Class Honours</strong>. During my studies, I developed a strong interest in applied mathematics, statistics, and computing, which I've carried into my professional career.
-            </p>
+            {/* Education Section */}
+            <section className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-6 border border-gray-700">
+              <h2 className="text-2xl font-bold text-[#1DB954] mb-4">Education</h2>
+              <div className="space-y-4">
+                <div>
+                  <h3 className="font-semibold text-lg">MSc in Mathematics</h3>
+                  <p className="text-sm text-gray-400">Cardiff University (In Progress)</p>
+                  <p className="leading-relaxed text-gray-100 mt-2">
+                    Pursuing advanced mathematical knowledge and contributing to meaningful projects.
+                  </p>
+                </div>
+                <div className="border-t border-gray-600 pt-4">
+                  <h3 className="font-semibold text-lg">BSc in Mathematics with First-Class Honours</h3>
+                  <p className="text-sm text-gray-400">Aberystwyth University</p>
+                  <p className="leading-relaxed text-gray-100 mt-2">
+                    Developed strong interest in applied mathematics, statistics, and computing during my studies.
+                  </p>
+                </div>
+              </div>
+            </section>
 
-            <p>
-                Professionally, I have worked as a Fraud Data Analyst at Admiral Insurance and as a Data Analyst at LGIM. These roles allowed me to apply mathematical and programming skills in real-world scenarios, using tools like SQL, Python, and Tableau. I've also enjoyed building personal coding projects, including this portfolio website and <strong>PosterToPlaylist</strong>, which merge my interest in mathematics, data, and technology.
-            </p>
+            {/* Experience Section */}
+            <section className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-6 border border-gray-700">
+              <h2 className="text-2xl font-bold text-[#1DB954] mb-4">Professional Experience</h2>
+              <div className="space-y-4">
+                <div>
+                  <h3 className="font-semibold text-lg">Data Analyst</h3>
+                  <p className="text-sm text-gray-400">LGIM</p>
+                </div>
+                <div className="border-t border-gray-600 pt-4">
+                  <h3 className="font-semibold text-lg">Fraud Data Analyst</h3>
+                  <p className="text-sm text-gray-400">Admiral Insurance</p>
+                </div>
+              </div>
+              <p className="leading-relaxed text-gray-100 mt-6">
+                Applied mathematical and programming skills in real-world scenarios, using tools like <strong>SQL</strong>, <strong>Python</strong>, and <strong>Tableau</strong>. Also built personal coding projects including this portfolio website and <strong>PosterToPlaylist</strong>.
+              </p>
+            </section>
 
-            <p>
+            {/* Interests Section */}
+            <section className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-6 border border-gray-700">
+              <h2 className="text-2xl font-bold text-[#1DB954] mb-4">Interests & Goals</h2>
+              <p className="leading-relaxed text-gray-100 mb-4">
                 Outside of work, I enjoy cycling, playing guitar, and losing at Magic: The Gathering 😉.
-            </p>
-
-            <p>
-                I'm currently pursuing an MSc in Mathematics at Cardiff University, aiming to deepen my mathematical knowledge and contribute to meaningful projects. My goal is to pursue a mathematically rigorous career, whether in academia or applied industries like engineering and aerospace.
-            </p>
+              </p>
+              <p className="leading-relaxed text-gray-100">
+                My goal is to pursue a mathematically rigorous career, whether in academia or applied industries like engineering and aerospace.
+              </p>
+            </section>
             </div>
         </div>
         </main>
