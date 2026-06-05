@@ -26,7 +26,7 @@ export default function SidebarLayout({ children }) {
     <div className={`${geistMono.className} flex min-h-screen bg-[#0f1117] text-[#fcffe9]`}>
       {/* Sidebar */}
       <aside
-        className={`transition-all duration-300 bg-[#11141c] flex flex-col gap-6 overflow-hidden border-r border-gray-700 ${
+        className={`sticky top-0 h-screen transition-all duration-300 bg-[#11141c] flex flex-col gap-6 overflow-hidden border-r border-gray-700 ${
           sidebarOpen ? "w-64 p-4 items-start" : "w-16 p-4 items-center"
         }`}
       >

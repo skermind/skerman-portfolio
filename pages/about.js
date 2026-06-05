@@ -37,10 +37,7 @@ export default function About() {
 
             {/* Content Sections */}
             <div className="flex-1 space-y-10">
-            <div>
-              <h1 className="text-5xl font-bold mb-2">About Me</h1>
-              <div className="w-16 h-1 bg-gradient-to-r from-[#1DB954] to-transparent"></div>
-            </div>
+            <h1 className="text-5xl font-bold">About Me</h1>
 
             {/* Background Section */}
             <section className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-6 border border-gray-700">
