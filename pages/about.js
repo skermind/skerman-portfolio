@@ -14,7 +14,7 @@ export default function About() {
             <img 
                 src="/images/daniel.png" 
                 alt="Daniel Skerman" 
-                className="w-40 h-40 rounded-full border-4 border-[#1DB954] object-cover"
+                className="w-40 h-40 rounded-full border-4 border-[#1DB954] object-cover shadow-lg"
             />
 
             {/* Skills grid */}
@@ -27,7 +27,7 @@ export default function About() {
                 ].map((skill, idx) => (
                 <div key={idx} className="relative w-16 h-16 flex items-center justify-center group">
                     <img src={skill.src} alt={`${skill.label} Logo`} className="w-10 h-10 object-contain" />
-                    <span className="absolute top-full mt-1 opacity-0 group-hover:opacity-100 transition bg-[#1DB954] text-black text-xs rounded px-2 py-1 pointer-events-none">
+                    <span className="absolute top-full mt-1 opacity-0 group-hover:opacity-100 transition bg-[#1DB954] text-black text-xs rounded px-2 py-1 pointer-events-none shadow-md">
                     {skill.label}
                     </span>
                 </div>
@@ -37,18 +37,18 @@ export default function About() {
 
             {/* Text */}
             <div className="flex-1 space-y-4">
-            <h1 className="text-4xl font-bold mb-4 text-[#1DB954]">About Me</h1>
+            <h1 className="text-4xl font-bold mb-4">About Me</h1>
 
             <p>
-                Hello! I’m <strong>Daniel Skerman</strong>, an aspiring mathematician and data analyst with a love for coding and problem-solving. Originally from The West Midlands, I grew up understanding the value of perseverance and curiosity, which has shaped my approach to both learning and work. 
+                Hello! I'm <strong>Daniel Skerman</strong>, an aspiring mathematician and data analyst with a love for coding and problem-solving. Originally from The West Midlands, I grew up understanding the value of perseverance and curiosity, which has shaped my approach to both learning and work. 
             </p>
 
             <p>
-                My academic journey led me to Aberystwyth University, where I earned a <strong>BSc in Mathematics with First-Class Honours</strong>. During my studies, I developed a strong interest in applied mathematics, statistics, and computing, which I’ve carried into my professional career.
+                My academic journey led me to Aberystwyth University, where I earned a <strong>BSc in Mathematics with First-Class Honours</strong>. During my studies, I developed a strong interest in applied mathematics, statistics, and computing, which I've carried into my professional career.
             </p>
 
             <p>
-                Professionally, I have worked as a Fraud Data Analyst at Admiral Insurance and as a Data Analyst at LGIM. These roles allowed me to apply mathematical and programming skills in real-world scenarios, using tools like SQL, Python, and Tableau. I’ve also enjoyed building personal coding projects, including this portfolio website and <strong>PosterToPlaylist</strong>, which merge my interest in mathematics, data, and technology.
+                Professionally, I have worked as a Fraud Data Analyst at Admiral Insurance and as a Data Analyst at LGIM. These roles allowed me to apply mathematical and programming skills in real-world scenarios, using tools like SQL, Python, and Tableau. I've also enjoyed building personal coding projects, including this portfolio website and <strong>PosterToPlaylist</strong>, which merge my interest in mathematics, data, and technology.
             </p>
 
             <p>
@@ -56,7 +56,7 @@ export default function About() {
             </p>
 
             <p>
-                I’m currently pursuing an MSc in Mathematics at Cardiff University, aiming to deepen my mathematical knowledge and contribute to meaningful projects. My goal is to pursue a mathematically rigorous career, whether in academia or applied industries like engineering and aerospace.
+                I'm currently pursuing an MSc in Mathematics at Cardiff University, aiming to deepen my mathematical knowledge and contribute to meaningful projects. My goal is to pursue a mathematically rigorous career, whether in academia or applied industries like engineering and aerospace.
             </p>
             </div>
         </div>

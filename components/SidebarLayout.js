@@ -8,7 +8,7 @@ const geistMono = Geist_Mono({
 });
 
 export default function SidebarLayout({ children }) {
-  const [sidebarOpen, setSidebarOpen] = useState(false); // start hidden
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [projectsOpen, setProjectsOpen] = useState(false);
 
   const navLinks = [
@@ -26,7 +26,7 @@ export default function SidebarLayout({ children }) {
     <div className={`${geistMono.className} flex min-h-screen bg-[#0f1117] text-[#fcffe9]`}>
       {/* Sidebar */}
       <aside
-        className={`transition-all duration-300 bg-[#11141c] flex flex-col gap-6 overflow-hidden ${
+        className={`transition-all duration-300 bg-[#11141c] flex flex-col gap-6 overflow-hidden border-r border-gray-700 ${
           sidebarOpen ? "w-64 p-4 items-start" : "w-16 p-4 items-center"
         }`}
       >
@@ -65,7 +65,7 @@ export default function SidebarLayout({ children }) {
                       {projectsOpen && (
                         <div className="ml-6 mt-2 flex flex-col gap-1">
                           {projectLinks.map((proj) => (
-                            <a key={proj.href} href={proj.href} className="hover:text-[#1DB954] transition px-1 py-0.5 rounded">
+                            <a key={proj.href} href={proj.href} className="hover:text-[#1DB954] transition px-1 py-0.5 rounded text-sm">
                               {proj.label}
                             </a>
                           ))}
@@ -101,7 +101,7 @@ export default function SidebarLayout({ children }) {
 
         {/* Footer */}
         {sidebarOpen && (
-          <div className="mt-auto text-sm text-[#888] px-2">
+          <div className="mt-auto text-sm text-gray-500 px-2">
             &copy; 2025 Daniel Skerman
           </div>
         )}

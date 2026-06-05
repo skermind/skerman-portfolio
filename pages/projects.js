@@ -33,7 +33,6 @@ export default function Projects() {
       linkText: "Preview",
       moreInfo: "#",
       moreInfoText: "Details",
-      // no image property here or set image: null
     },
   ];
 
@@ -45,12 +44,12 @@ export default function Projects() {
   return (
     <SidebarLayout>
       <main className={`${geistSans.className} ${geistMono.className} min-h-screen flex flex-col items-center justify-center p-8 bg-[#0f1117]`}>
-        <h1 className="text-4xl font-bold mb-8 text-[#1DB954]">Projects</h1>
+        <h1 className="text-4xl font-bold mb-8">Projects</h1>
         <div className="relative w-full max-w-lg h-[550px] flex flex-col justify-between">
           {/* Left Arrow */}
           <button
             onClick={prev}
-            className="absolute left-[-3rem] top-1/2 -translate-y-1/2 p-2 bg-[#1DB954] text-black rounded-full hover:bg-[#17a84f] transition"
+            className="absolute left-[-3rem] top-1/2 -translate-y-1/2 p-2 bg-[#1DB954] text-black rounded-full hover:bg-[#17a84f] transition shadow-lg hover:shadow-xl"
           >
             <ChevronLeft size={28} />
           </button>
@@ -63,7 +62,7 @@ export default function Projects() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -50 }}
               transition={{ duration: 0.4 }}
-              className="bg-[#11141c] rounded-xl shadow-lg p-6 flex flex-col items-center h-[500px] w-full"
+              className="bg-[#11141c] rounded-lg shadow-xl p-6 flex flex-col items-center h-[500px] w-full border border-gray-700"
             >
               {projects[index].image ? (
                 <div className="relative w-full h-64 mb-4 bg-black rounded-md flex items-center justify-center">
@@ -80,19 +79,19 @@ export default function Projects() {
                 </div>
               )}
 
-              <h2 className="text-2xl font-semibold mb-2 text-[#1DB954]">{projects[index].title}</h2>
-              <p className="flex-grow text-center mb-4 text-[#fcffe9]">{projects[index].description}</p>
+              <h2 className="text-2xl font-semibold mb-2">{projects[index].title}</h2>
+              <p className="flex-grow text-center mb-4 text-gray-300">{projects[index].description}</p>
 
               <div className="mt-auto flex gap-3 w-full">
                 <a
                   href={projects[index].link}
-                  className={`bg-black text-[#fcffe9] flex-1 text-center px-5 py-2 rounded-xl transition hover:bg-[#1DB954] hover:text-[#fcffe9]`}
+                  className="bg-gradient-to-br from-green-500 to-green-600 text-white flex-1 text-center px-4 py-2 rounded-lg transition hover:shadow-lg hover:from-green-400 hover:to-green-500 shadow-md font-medium"
                 >
                   {projects[index].linkText}
                 </a>
                 <a
                   href={projects[index].moreInfo}
-                  className={`bg-black text-[#fcffe9] flex-1 text-center px-5 py-2 rounded-xl transition hover:bg-[#1DB954] hover:text-[#fcffe9]`}
+                  className="bg-gray-700 text-white flex-1 text-center px-4 py-2 rounded-lg transition hover:shadow-lg hover:bg-gray-600 shadow-md font-medium border border-gray-600"
                 >
                   {projects[index].moreInfoText}
                 </a>
@@ -103,7 +102,7 @@ export default function Projects() {
           {/* Right Arrow */}
           <button
             onClick={next}
-            className="absolute right-[-3rem] top-1/2 -translate-y-1/2 p-2 bg-[#1DB954] text-black rounded-full hover:bg-[#17a84f] transition"
+            className="absolute right-[-3rem] top-1/2 -translate-y-1/2 p-2 bg-[#1DB954] text-black rounded-full hover:bg-[#17a84f] transition shadow-lg hover:shadow-xl"
           >
             <ChevronRight size={28} />
           </button>
