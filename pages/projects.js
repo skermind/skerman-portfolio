@@ -80,7 +80,7 @@ export default function Projects() {
               )}
 
               <h2 className="text-2xl font-semibold mb-2">{projects[index].title}</h2>
-              <p className="flex-grow text-center mb-4 text-gray-300">{projects[index].description}</p>
+              <p className="flex-grow text-center mb-4">{projects[index].description}</p>
 
               <div className="mt-auto flex gap-3 w-full">
                 <a

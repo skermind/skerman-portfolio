@@ -22,7 +22,7 @@ export default function Home() {
           <h1 className="text-5xl font-bold mb-4">
             Hi, I'm Daniel Skerman
           </h1>
-          <p className="text-lg mb-6 text-center max-w-xl font-sans text-gray-300">
+          <p className="text-lg mb-6 text-center max-w-xl font-sans">
             I'm a mathematics student working in data.
             <br />
             Welcome to my portfolio!
