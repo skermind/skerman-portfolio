@@ -220,7 +220,7 @@ export default function About() {
                                 <span className="text-[#1DB954] text-xl">🤝</span> Professional Motivation
                             </h3>
                             <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-                                I love building tools that genuinely help people—like automating tedious workflows so colleagues can get home to their families. I want to be challenged by hard problems so I can proudly point to a finished system and say, <em className="text-[#1DB954]">"I built that."</em>
+                                I love building tools that genuinely help people—like automating tedious workflows so colleagues can get home to their families. I want to be challenged by hard problems so I can proudly point to a finished system and say, <em className="text-[#1DB954]">&quot;I built that.&quot;</em>
                             </p>
                         </div>
 
