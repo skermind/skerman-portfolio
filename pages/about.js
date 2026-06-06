@@ -1,6 +1,6 @@
 import { Geist, Geist_Mono } from 'next/font/google';
 import SidebarLayout from "@/components/SidebarLayout";
-import { FileText, ScrollText, Github, Linkedin  } from 'lucide-react';
+import { FileText, ScrollText, Github, Linkedin, Mail } from 'lucide-react';
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
 const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin'] });
@@ -112,6 +112,14 @@ export default function About() {
                         className="text-gray-400 hover:text-[#1DB954] transition-transform hover:scale-110"
                     >
                         <Linkedin size={26} />
+                    </a>
+
+                    {/* Email */}
+                    <a
+                        href="mailto:danielskerman2000@gmail.com"
+                        className="text-gray-400 hover:text-[#1DB954] transition-transform hover:scale-110"
+                    >
+                        <Mail size={26} />
                     </a>
 
                 </div>
