@@ -71,7 +71,7 @@ export default function PosterToPlaylistInfo() {
           </p>
           <ul className="list-disc list-inside mb-6 space-y-2 text-[#fcffe9]">
           <li>
-              <strong>Spotify API Changes:</strong> User login and song metrics were removed, so we shifted to a shared Spotify account that generates playlists from artists' top tracks.
+              <strong>Spotify API Changes:</strong> User login and song metrics were removed, so we shifted to a shared Spotify account that generates playlists from artists&apos; top tracks.
           </li>
           <li>
               <strong>SEO Limitations:</strong> Streamlit’s client-side rendering hinders search engine indexing. We solved this by serving a static landing page for bots and proxying users to the app.

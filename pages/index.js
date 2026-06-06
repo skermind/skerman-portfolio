@@ -21,7 +21,7 @@ export default function Home() {
           {/* Greeting & Title */}
           <div className="space-y-4">
             <h1 className="text-5xl md:text-6xl font-bold tracking-tight">
-              Hi, I'm <span className="text-[#1DB954]">Daniel Skerman</span>
+              Hi, I&apos;m <span className="text-[#1DB954]">Daniel Skerman</span>
             </h1>
             <h2 className="text-xl md:text-2xl text-gray-300 font-medium">
               Finance Data Engineer & MSc Mathematics Candidate

@@ -209,7 +209,7 @@ export default function About() {
                                 <span className="text-[#1DB954] text-xl">🚀</span> Long-Term Vision
                             </h3>
                             <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-                                My goal is to find a mathematically stimulating role where I can make a tangible difference. While I’d love to pursue a PhD eventually, my current focus is on an industry role where I can apply my skills directly. I firmly believe you don't need a formal institution to discover and enjoy mathematics.
+                                My goal is to find a mathematically stimulating role where I can make a tangible difference. While I&apos;d love to pursue a PhD eventually, my current focus is on an industry role where I can apply my skills directly. I firmly believe you don&apos;t need a formal institution to discover and enjoy mathematics.
                             </p>
                         </div>
 
