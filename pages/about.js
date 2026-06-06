@@ -58,14 +58,12 @@ export default function About() {
             <div className="mt-8 pt-8 border-t border-gray-700">
                 <div className="grid grid-cols-2 gap-6">
                     {[
-                        { href: "/documents/Daniel_Skerman_CV.pdf", label: "CV", icon: <FileText size={32} /> },
-                        { href: "/documents/Transcript.pdf", label: "Transcript", icon: <ScrollText size={32} /> },
+                        { href: "/cv", label: "CV", icon: <FileText size={32} /> },
+                        { href: "/transcripts", label: "Transcript", icon: <ScrollText size={32} /> },
                     ].map((doc, idx) => (
                         <a 
                             key={idx} 
                             href={doc.href} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
                             className="relative w-16 h-16 flex items-center justify-center group"
                         >
                             {/* Icon wrapper with hover color change and zoom */}

@@ -15,8 +15,8 @@ export default function SidebarLayout({ children }) {
     { href: "/", label: "Home", icon: <Home size={18} /> },
     { href: "/projects", label: "Projects", icon: <Grid size={18} /> },
     { href: "/about", label: "About", icon: <Info size={18} /> },
-    { href: "/documents/CV_Daniel_Skerman.pdf", label: "CV", icon: <FileText size={18} /> },
-    { href: "/documents/Transcript.pdf", label: "Transcript", icon: <ScrollText size={18} /> },
+    { href: "/cv", label: "CV", icon: <FileText size={18} /> },
+    { href: "/transcripts", label: "Transcript", icon: <ScrollText size={18} /> },
     { href: "/contact", label: "Contact", icon: <Mail size={18} /> },
   ];
 
