@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from 'next/font/google';
 import SidebarLayout from "@/components/SidebarLayout";
 import { FileText, ScrollText, Github, Linkedin, Mail } from 'lucide-react';
+import Link from "next/link";
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
 const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin'] });
@@ -61,11 +62,11 @@ export default function About() {
                         { href: "/cv", label: "CV", icon: <FileText size={32} /> },
                         { href: "/transcripts", label: "Transcript", icon: <ScrollText size={32} /> },
                     ].map((doc, idx) => (
-                        <a 
-                            key={idx} 
-                            href={doc.href} 
-                            className="relative w-16 h-16 flex items-center justify-center group"
-                        >
+                            <Link
+                                key={idx}
+                                href={doc.href}
+                                className="relative w-16 h-16 flex items-center justify-center group"
+                            >
                             {/* Icon wrapper with hover color change and zoom */}
                             <div className="text-gray-300 transition-all group-hover:text-[#1DB954] group-hover:scale-110">
                                 {doc.icon}
@@ -75,7 +76,7 @@ export default function About() {
                             <span className="absolute top-full mt-2 opacity-0 group-hover:opacity-100 transition-all bg-[#1DB954] text-black text-xs font-bold rounded px-2 py-1 pointer-events-none shadow-md whitespace-nowrap z-10">
                                 {doc.label}
                             </span>
-                        </a>
+                        </Link>
                     ))}
                 </div>
             </div>

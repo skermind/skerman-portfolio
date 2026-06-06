@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Geist, Geist_Mono } from "next/font/google";
 import SidebarLayout from "@/components/SidebarLayout";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -83,18 +84,18 @@ export default function Projects() {
               <p className="flex-grow text-center mb-4">{projects[index].description}</p>
 
               <div className="mt-auto flex gap-3 w-full">
-                <a
-                  href={projects[index].link}
-                  className="bg-gradient-to-br from-green-500 to-green-600 text-white flex-1 text-center px-4 py-2 rounded-lg transition hover:shadow-lg hover:from-green-400 hover:to-green-500 shadow-md font-medium"
-                >
-                  {projects[index].linkText}
-                </a>
-                <a
-                  href={projects[index].moreInfo}
-                  className="bg-gray-700 text-white flex-1 text-center px-4 py-2 rounded-lg transition hover:shadow-lg hover:bg-gray-600 shadow-md font-medium border border-gray-600"
-                >
-                  {projects[index].moreInfoText}
-                </a>
+              <Link
+                href={projects[index].link}
+                className="bg-gradient-to-br from-green-500 to-green-600 text-white flex-1 text-center px-4 py-2 rounded-lg transition hover:shadow-lg hover:from-green-400 hover:to-green-500 shadow-md font-medium"
+              >
+                {projects[index].linkText}
+              </Link>
+              <Link
+                href={projects[index].moreInfo}
+                className="bg-gray-700 text-white flex-1 text-center px-4 py-2 rounded-lg transition hover:shadow-lg hover:bg-gray-600 shadow-md font-medium border border-gray-600"
+              >
+                {projects[index].moreInfoText}
+              </Link>
               </div>
             </motion.div>
           </AnimatePresence>

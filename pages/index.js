@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import SidebarLayout from "@/components/SidebarLayout";
 import { ArrowRight, FileText } from "lucide-react"; // Add these icons for polish
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,26 +39,26 @@ export default function Home() {
 
           {/* Call to Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-            <a
-              href="/projects"
-              className="group flex items-center gap-2 bg-[#1DB954] text-black px-8 py-3.5 rounded-lg font-semibold shadow-lg hover:bg-[#1ed760] hover:shadow-[0_0_20px_rgba(29,185,84,0.4)] transition-all duration-200"
-            >
-              View Projects
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </a>
-            <a
+          <Link
+            href="/projects"
+            className="group flex items-center gap-2 bg-[#1DB954] text-black px-8 py-3.5 rounded-lg font-semibold shadow-lg hover:bg-[#1ed760] hover:shadow-[0_0_20px_rgba(29,185,84,0.4)] transition-all duration-200"
+          >
+            View Projects
+            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+          </Link>
+            <Link
               href="/about"
               className="flex items-center gap-2 bg-gray-800 text-[#fcffe9] px-8 py-3.5 rounded-lg font-semibold border border-gray-700 hover:bg-gray-700 hover:border-gray-600 transition-all duration-200"
             >
               About Me
-            </a>
-            <a
-              href="/cv"
-              className="flex items-center gap-2 text-gray-400 hover:text-[#1DB954] transition-colors duration-200 font-medium mt-2 sm:mt-0"
-            >
-              <FileText className="w-4 h-4" />
-              View CV
-            </a>
+            </Link>
+          <Link
+            href="/cv"
+            className="flex items-center gap-2 text-gray-400 hover:text-[#1DB954] transition-colors duration-200 font-medium mt-2 sm:mt-0"
+          >
+            <FileText className="w-4 h-4" />
+            View CV
+          </Link>
           </div>
 
           {/* Subtle Status Indicator */}

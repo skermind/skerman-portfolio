@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import SidebarLayout from "@/components/SidebarLayout";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -113,12 +114,12 @@ export default function PosterToPlaylistInfo() {
               alt="PosterToPlaylist Square Logo"
               className="h-10 w-10"
             />
-          <a
+            <Link
               href="/postertoplaylist-under-construction"
               className="text-[#1DB954] underline"
-          >
+            >
               postertoplaylist.com
-          </a>
+            </Link>
           </div>
         </div>
       </main>

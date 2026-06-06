@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Geist_Mono } from "next/font/google";
 import { ChevronLeft, ChevronRight, Home, Grid, Info, Mail, FileText, ScrollText, Github, Linkedin  } from "lucide-react";
+import Link from "next/link";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -65,13 +66,13 @@ export default function SidebarLayout({ children }) {
                   {sidebarOpen ? (
                     <>
                       <div className="flex items-center justify-between w-full">
-                        <a
-                          href={link.href}
-                          className="flex items-center gap-2 px-2 py-1 w-full rounded hover:bg-[#1DB954]/20 hover:text-[#1DB954] transition"
-                        >
-                          {link.icon}
-                          {link.label}
-                        </a>
+                        <Link href={link.href} className="flex items-center gap-2 px-2 py-1 rounded hover:bg-[#1DB954]/20 hover:text-[#1DB954] transition">
+
+                        {link.icon}
+
+                        {sidebarOpen && link.label}
+
+                      </Link>
                         <button
                           onClick={() => setProjectsOpen(!projectsOpen)}
                           className="text-[#1DB954] px-2 py-1 rounded hover:bg-[#1DB954]/20 transition"
@@ -84,9 +85,9 @@ export default function SidebarLayout({ children }) {
                       {projectsOpen && (
                         <div className="ml-6 mt-2 flex flex-col gap-1">
                           {projectLinks.map((proj) => (
-                            <a key={proj.href} href={proj.href} className="hover:text-[#1DB954] transition px-1 py-0.5 rounded text-sm">
-                              {proj.label}
-                            </a>
+                           <Link key={proj.href} href={proj.href} className="hover:text-[#1DB954] transition px-1 py-0.5 rounded text-sm">
+                            {proj.label}
+                          </Link>
                           ))}
                         </div>
                       )}

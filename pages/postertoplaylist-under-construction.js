@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import SidebarLayout from "@/components/SidebarLayout";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -83,13 +84,13 @@ export default function PosterToPlaylistUnderConstruction() {
           <h2 className="text-2xl font-semibold mb-3 text-[#1DB954]">
             Project Page
           </h2>
-
-          <a
+          
+          <Link
             href="/projects/postertoplaylist"
             className="text-[#1DB954] underline"
           >
             View project details
-          </a>
+          </Link>
 
         </div>
       </main>
