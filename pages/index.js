@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import SidebarLayout from "@/components/SidebarLayout";
+import { ArrowRight, FileText } from "lucide-react"; // Add these icons for polish
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,34 +15,59 @@ const geistMono = Geist_Mono({
 export default function Home() {
   return (
     <SidebarLayout>
-      <div
-        className={`${geistSans.className} ${geistMono.className} font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center justify-center min-h-screen p-8 pb-20 gap-16 sm:p-20`}
-      >
-        <main className="flex flex-col gap-[32px] row-start-2 items-center">
-          <h1 className="text-5xl font-bold mb-4">
-            Hi, I'm Daniel Skerman
-          </h1>
-          <p className="text-lg mb-6 text-center max-w-xl font-sans">
-            I'm a mathematics student working in data.
-            <br />
-            Welcome to my portfolio!
+      <main className={`${geistSans.className} ${geistMono.className} min-h-screen bg-[#0f1117] text-[#fcffe9] flex items-center justify-center p-8`}>
+        <div className="max-w-3xl w-full text-center space-y-8">
+          
+          {/* Greeting & Title */}
+          <div className="space-y-4">
+            <h1 className="text-5xl md:text-6xl font-bold tracking-tight">
+              Hi, I'm <span className="text-[#1DB954]">Daniel Skerman</span>
+            </h1>
+            <h2 className="text-xl md:text-2xl text-gray-300 font-medium">
+              Finance Data Engineer & MSc Mathematics Candidate
+            </h2>
+          </div>
+
+          {/* Value Proposition / Bio */}
+          <p className="text-lg md:text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto">
+            Welcome to my portfolio where I document my projects and technical ramblings.
+            <span className="block mt-2 text-[#fcffe9] font-medium">
+              Currently writing a dissertation on the Direct Method of Calculus of Variations, while continuing my technical growth
+              </span>
           </p>
-          <div className="flex gap-4">
+
+          {/* Call to Action Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
             <a
               href="/projects"
-              className="bg-gradient-to-br from-green-500 to-green-600 text-white px-6 py-3 rounded-lg shadow-lg hover:shadow-xl hover:from-green-400 hover:to-green-500 transition-all duration-200 font-medium"
+              className="group flex items-center gap-2 bg-[#1DB954] text-black px-8 py-3.5 rounded-lg font-semibold shadow-lg hover:bg-[#1ed760] hover:shadow-[0_0_20px_rgba(29,185,84,0.4)] transition-all duration-200"
             >
               View Projects
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </a>
             <a
               href="/about"
-              className="bg-gray-700 text-white px-6 py-3 rounded-lg shadow-md hover:shadow-lg hover:bg-gray-600 transition-all duration-200 font-medium border border-gray-600"
+              className="flex items-center gap-2 bg-gray-800 text-[#fcffe9] px-8 py-3.5 rounded-lg font-semibold border border-gray-700 hover:bg-gray-700 hover:border-gray-600 transition-all duration-200"
             >
               About Me
             </a>
+            <a
+              href="/cv"
+              className="flex items-center gap-2 text-gray-400 hover:text-[#1DB954] transition-colors duration-200 font-medium mt-2 sm:mt-0"
+            >
+              <FileText className="w-4 h-4" />
+              View CV
+            </a>
           </div>
-        </main>
-      </div>
+
+          {/* Subtle Status Indicator */}
+          <div className="pt-8 flex items-center justify-center gap-2 text-sm text-gray-500">
+            <span className="w-2 h-2 rounded-full bg-[#1DB954] animate-pulse"></span>
+            Open to opportunities in Software Enigeering, Quantitative Finance & Data Science
+          </div>
+
+        </div>
+      </main>
     </SidebarLayout>
   );
 }
