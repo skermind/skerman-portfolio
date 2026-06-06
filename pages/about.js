@@ -26,6 +26,7 @@ export default function About() {
                     { src: "/images/MathsLogo.svg", label: "Maths" },
                     { src: "/images/PythonLogo.svg", label: "Python" },
                     { src: "/images/CSharpLogo.svg", label: "C#" },
+                    { src: "/images/TableauLogo.svg", label: "Tableau" },
                     { src: "/images/LaTeXLogo.svg", label: "LaTeX" }, 
                     { src: "/images/RLogo.svg", label: "R" },
                     { src: "/images/PostgresLogo.svg", label: "PostgreSQL" },
@@ -57,7 +58,7 @@ export default function About() {
             <div className="mt-8 pt-8 border-t border-gray-700">
                 <div className="grid grid-cols-2 gap-6">
                     {[
-                        { href: "/documents/CV_Daniel_Skerman.pdf", label: "CV", icon: <FileText size={32} /> },
+                        { href: "/documents/Daniel_Skerman_CV.pdf", label: "CV", icon: <FileText size={32} /> },
                         { href: "/documents/Transcript.pdf", label: "Transcript", icon: <ScrollText size={32} /> },
                     ].map((doc, idx) => (
                         <a 
