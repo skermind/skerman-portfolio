@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Geist_Mono } from "next/font/google";
-import { ChevronLeft, ChevronRight, Home, Grid, Info, Mail } from "lucide-react";
+import { ChevronLeft, ChevronRight, Home, Grid, Info, Mail, FileText, ScrollText } from "lucide-react";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -15,6 +15,8 @@ export default function SidebarLayout({ children }) {
     { href: "/", label: "Home", icon: <Home size={18} /> },
     { href: "/projects", label: "Projects", icon: <Grid size={18} /> },
     { href: "/about", label: "About", icon: <Info size={18} /> },
+    { href: "/documents/CV_Daniel_Skerman.pdf", label: "CV", icon: <FileText size={18} /> },
+    { href: "/documents/Transcript.pdf", label: "Transcript", icon: <ScrollText size={18} /> },
     { href: "/contact", label: "Contact", icon: <Mail size={18} /> },
   ];
 
@@ -102,7 +104,7 @@ export default function SidebarLayout({ children }) {
         {/* Footer */}
         {sidebarOpen && (
           <div className="mt-auto text-sm text-gray-500 px-2">
-            &copy; 2025 Daniel Skerman
+            &copy; 2026 Daniel Skerman
           </div>
         )}
       </aside>
