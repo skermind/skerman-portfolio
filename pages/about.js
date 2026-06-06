@@ -1,6 +1,6 @@
 import { Geist, Geist_Mono } from 'next/font/google';
 import SidebarLayout from "@/components/SidebarLayout";
-import { FileText, ScrollText } from 'lucide-react';
+import { FileText, ScrollText, Github, Linkedin  } from 'lucide-react';
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
 const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin'] });
@@ -84,7 +84,38 @@ export default function About() {
 
             {/* Content Sections */}
             <div className="flex-1 space-y-10">
-                <h1 className="text-5xl font-bold text-[#fcffe9]">About Me</h1>
+                <div className="flex items-center justify-between">
+    
+                {/* Title */}
+                <h1 className="text-5xl font-bold text-[#fcffe9]">
+                    About Me
+                </h1>
+
+                {/* Social icons */}
+                <div className="flex items-center gap-4">
+                    
+                    {/* GitHub */}
+                    <a
+                        href="https://github.com/skermind"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-400 hover:text-[#1DB954] transition-transform hover:scale-110"
+                    >
+                        <Github size={26} />
+                    </a>
+
+                    {/* LinkedIn */}
+                    <a
+                        href="https://www.linkedin.com/in/daniel-skerman/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-400 hover:text-[#1DB954] transition-transform hover:scale-110"
+                    >
+                        <Linkedin size={26} />
+                    </a>
+
+                </div>
+            </div>
 
                 {/* Background Section */}
                 <section className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg p-6 border border-gray-700">
