@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://danielskerman.com/
+
+# Sitemaps
+Sitemap: https://danielskerman.com/sitemap.xml
