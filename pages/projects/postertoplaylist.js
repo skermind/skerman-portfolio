@@ -114,7 +114,7 @@ export default function PosterToPlaylistInfo() {
               className="h-10 w-10"
             />
           <a
-              href="https://app.postertoplaylist.com"
+              href="/postertoplaylist-under-construction"
               className="text-[#1DB954] underline"
           >
               postertoplaylist.com
