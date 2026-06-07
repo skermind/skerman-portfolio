@@ -16,7 +16,7 @@ export default function About() {
         <div className="flex-shrink-0 md:sticky md:top-8">
             {/* Profile Image */}
             <img 
-                src="/images/daniel.png" 
+                src="/images/Daniel.png" 
                 alt="Daniel Skerman" 
                 className="w-40 h-40 rounded-full border-4 border-[#1DB954] object-cover shadow-lg"
             />
