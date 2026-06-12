@@ -24,15 +24,11 @@ The site is currently deployed and hosted on **DigitalOcean**. [See More](https:
 
 ### Home Page
 > Add screenshot here
-![Home Page](./screenshots/home.png)
-
-### Projects Section
-> Add screenshot here
-![Projects](./screenshots/projects.png)
+![Home Page](./public/screenshots/Home.png)
 
 ### Mobile View
 > Add screenshot here
-![Mobile View](./screenshots/mobile.png)
+![Mobile View](./public/screenshots/Mobile.png)
 
 ---
 
