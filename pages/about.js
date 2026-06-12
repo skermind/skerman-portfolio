@@ -9,55 +9,59 @@ const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin']
 export default function About() {
   return (
     <SidebarLayout>
-        <main className={`${geistSans.className} ${geistMono.className} min-h-screen bg-[#0f1117] text-[#fcffe9] p-8 font-sans`}>
+        <main className={`${geistSans.className} ${geistMono.className} min-h-screen bg-[#0f1117] text-[#fcffe9] p-4 md:p-8 font-sans`}>
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row md:items-start md:gap-12">
             
         {/* Photo & Skills Sidebar */}
-        <div className="flex-shrink-0 md:sticky md:top-8">
-            {/* Profile Image */}
-            <img 
-                src="/images/Daniel.png" 
-                alt="Daniel Skerman" 
-                className="w-40 h-40 rounded-full border-4 border-[#1DB954] object-cover shadow-lg"
-            />
+        <div className="flex-shrink-0 md:sticky md:top-8 flex flex-col md:border-r md:border-gray-700 md:pr-8">
+            {/* Mobile Header (About + Socials) */}
+            <div className="md:hidden flex items-center justify-between mb-4 gap-3">
 
-            {/* Skills grid: 2 columns, clean floating icons */}
-            <div className="grid grid-cols-2 gap-6 mt-8">
-                {[
-                    { src: "/images/MathsLogo.svg", label: "Maths" },
-                    { src: "/images/PythonLogo.svg", label: "Python" },
-                    { src: "/images/CSharpLogo.svg", label: "C#" },
-                    { src: "/images/TableauLogo.svg", label: "Tableau" },
-                    { src: "/images/LaTeXLogo.svg", label: "LaTeX" }, 
-                    { src: "/images/RLogo.svg", label: "R" },
-                    { src: "/images/PostgresLogo.svg", label: "PostgreSQL" },
-                    { src: "/images/DockerLogo.svg", label: "Docker" },
-                    { src: "/images/ReactLogo.svg", label: "React" },
-                    { src: "/images/GCPLogo.svg", label: "Google Cloud" },
-                ].map((skill, idx) => (
-                    <div key={idx} className="relative w-16 h-16 flex items-center justify-center group">
-                        {/* Clean icon with subtle hover zoom and conditional LaTeX invert */}
-                        <img 
-                            src={skill.src} 
-                            alt={`${skill.label} Logo`} 
-                            className={`w-10 h-10 object-contain transition-transform group-hover:scale-110 ${
-                                skill.label === 'LaTeX' ? 'filter brightness-0 invert' : ''
-                            }`} 
-                        />
-                        
-                        {/* Tooltip */}
-                        <span className="absolute top-full mt-2 opacity-0 group-hover:opacity-100 transition-all bg-[#1DB954] text-black text-xs font-bold rounded px-2 py-1 pointer-events-none shadow-md whitespace-nowrap z-10">
-                            {skill.label}
-                        </span>
-                    </div>
-                ))}
+            <h1 className="flex-1 min-w-0 whitespace-nowrap font-bold text-[#fcffe9] leading-tight
+                text-[clamp(1.2rem,5vw,1.8rem)]">
+                About Me
+            </h1>
+
+            <div className="flex items-center gap-3 flex-shrink-0">
+                <a href="https://github.com/skermind" className="text-gray-400 hover:text-[#1DB954]">
+                <Github size={22} />
+                </a>
+                <a href="https://www.linkedin.com/in/daniel-skerman/" className="text-gray-400 hover:text-[#1DB954]">
+                <Linkedin size={22} />
+                </a>
+                <a href="mailto:danielskerman2000@gmail.com" className="text-gray-400 hover:text-[#1DB954]">
+                <Mail size={22} />
+                </a>
+            </div>
+
+            </div>
+            {/* Profile Image (smaller on mobile) and mobile quick links */}
+            <div className="order-1 md:order-1 flex items-center justify-between w-full md:block gap-4">
+
+                {/* Profile Image (smaller on mobile) */}
+                <img 
+                    src="/images/Daniel.png" 
+                    alt="Daniel Skerman" 
+                    className="w-28 h-28 md:w-40 md:h-40 rounded-full border-4 border-[#1DB954] object-cover shadow-lg flex-shrink-0"
+                />
+
+                {/* Mobile-only quick links */}
+                <div className="md:hidden flex flex-col items-center gap-2 mr-3">
+                    <Link href="/cv" className="text-gray-300 hover:text-[#1DB954]">
+                        <FileText size={28} />
+                    </Link>
+                    <Link href="/transcripts" className="text-gray-300 hover:text-[#1DB954]">
+                        <ScrollText size={28} />
+                    </Link>
+                </div>
+
             </div>
 
             {/* ========================================== */}
-            {/* NEW: Documents Section (CV & Transcript)   */}
+            {/* Documents Section (CV & Transcript)        */}
             {/* ========================================== */}
-            <div className="mt-8 pt-8 border-t border-gray-700">
-                <div className="grid grid-cols-2 gap-6">
+            <div className="hidden md:block order-2 md:order-2 mt-8 pt-8 border-t border-gray-700">
+                <div className="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-6">
                     {[
                         { href: "/cv", label: "CV", icon: <FileText size={32} /> },
                         { href: "/transcripts", label: "Transcript", icon: <ScrollText size={32} /> },
@@ -81,11 +85,45 @@ export default function About() {
                 </div>
             </div>
 
+            {/* Divider before skills (mobile only) */}
+            <div className="order-3 md:hidden w-full border-t border-gray-700 mt-3 pt-2"></div>
+
+            {/* Skills grid: 5 columns on mobile, clean floating icons */}
+            <div className="order-4 md:order-1 mt-4 md:mt-8 grid grid-cols-5 gap-2 md:grid-cols-2 md:gap-6">
+                {[
+                    { src: "/images/MathsLogo.svg", label: "Maths" },
+                    { src: "/images/PythonLogo.svg", label: "Python" },
+                    { src: "/images/CSharpLogo.svg", label: "C#" },
+                    { src: "/images/TableauLogo.svg", label: "Tableau" },
+                    { src: "/images/LaTeXLogo.svg", label: "LaTeX" }, 
+                    { src: "/images/RLogo.svg", label: "R" },
+                    { src: "/images/PostgresLogo.svg", label: "PostgreSQL" },
+                    { src: "/images/DockerLogo.svg", label: "Docker" },
+                    { src: "/images/ReactLogo.svg", label: "React" },
+                    { src: "/images/GCPLogo.svg", label: "Google Cloud" },
+                ].map((skill, idx) => (
+                    <div key={idx} className="relative w-14 h-14 md:w-16 md:h-16 flex items-center justify-center group">
+                        {/* Clean icon with subtle hover zoom and conditional LaTeX invert */}
+                        <img 
+                            src={skill.src} 
+                            alt={`${skill.label} Logo`} 
+                            className={`w-8 h-8 md:w-10 md:h-10 object-contain transition-transform group-hover:scale-110 ${
+                                skill.label === 'LaTeX' ? 'filter brightness-0 invert' : ''
+                            }`} 
+                        />
+                        
+                        {/* Tooltip */}
+                        <span className="absolute top-full mt-2 opacity-0 group-hover:opacity-100 transition-all bg-[#1DB954] text-black text-xs font-bold rounded px-2 py-1 pointer-events-none shadow-md whitespace-nowrap z-10">
+                            {skill.label}
+                        </span>
+                    </div>
+                ))}
+            </div>
         </div>
 
             {/* Content Sections */}
             <div className="flex-1 space-y-10">
-                <div className="flex items-center justify-between">
+                <div className="hidden md:flex items-center justify-between">
     
                 {/* Title */}
                 <h1 className="text-5xl font-bold text-[#fcffe9]">

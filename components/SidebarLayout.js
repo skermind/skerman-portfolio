@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Geist_Mono } from "next/font/google";
-import { ChevronLeft, ChevronRight, Home, Grid, Info, Mail, FileText, ScrollText, Github, Linkedin  } from "lucide-react";
+import { ChevronLeft, ChevronRight, Home, Grid, Info, Mail, FileText, ScrollText, Github, Linkedin, Menu, X } from "lucide-react";
 import Link from "next/link";
 
 const geistMono = Geist_Mono({
@@ -11,6 +11,7 @@ const geistMono = Geist_Mono({
 export default function SidebarLayout({ children }) {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [projectsOpen, setProjectsOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
     { href: "/", label: "Home", icon: <Home size={18} /> },
@@ -43,16 +44,34 @@ export default function SidebarLayout({ children }) {
   ];
 
   return (
-    <div className={`${geistMono.className} flex min-h-screen bg-[#0f1117] text-[#fcffe9]`}>
+    <div className={`${geistMono.className} min-h-screen bg-[#0f1117] text-[#fcffe9]`}>
+
+      {/* Mobile Header */}
+      <div className="md:hidden sticky top-0 z-50 flex justify-start px-4 py-3 bg-[#11141c]">
+        <button
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="text-[#1DB954]"
+          aria-label="Toggle menu"
+        >
+          {mobileMenuOpen ? <X /> : <Menu />}
+        </button>
+      </div>
+
+      <div className="flex min-h-screen">
       {/* Sidebar */}
       <aside
-        className={`sticky top-0 h-screen transition-all duration-300 bg-[#11141c] flex flex-col gap-6 overflow-hidden border-r border-gray-700 ${
-          sidebarOpen ? "w-64 p-4 items-start" : "w-16 p-4 items-center"
-        }`}
+        className={`
+          fixed md:sticky top-[57px] md:top-0 left-0 z-40 h-[calc(100vh-57px)] md:h-screen
+          transition-all duration-300 bg-[#11141c]
+          flex flex-col gap-6 overflow-hidden border-r border-gray-700
+          ${mobileMenuOpen ? "translate-x-0" : "-translate-x-full"}
+          md:translate-x-0
+          ${sidebarOpen ? "w-64 p-4 items-start" : "w-16 p-4 items-center"}
+        `}
       >
         <button
           onClick={() => setSidebarOpen((open) => !open)}
-          className="text-[#1DB954] p-2 hover:bg-[#1DB954]/10 rounded transition"
+          className="hidden md:block text-[#1DB954] p-2 hover:bg-[#1DB954]/10 rounded transition"
           aria-label={sidebarOpen ? "Close sidebar" : "Open sidebar"}
         >
           {sidebarOpen ? <ChevronLeft /> : <ChevronRight />}
@@ -146,9 +165,17 @@ export default function SidebarLayout({ children }) {
       </aside>
 
       {/* Main content */}
-      <main className="flex-1 p-8">
+      <main className="flex-1 p-4 md:p-8 md:ml-0">
         {children}
       </main>
+    </div>
+
+      {mobileMenuOpen && (
+        <div
+          className="fixed inset-0 bg-black/50 z-30 md:hidden"
+          onClick={() => setMobileMenuOpen(false)}
+        />
+      )}
     </div>
   );
 }
