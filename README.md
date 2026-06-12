@@ -23,11 +23,9 @@ The site is currently deployed and hosted on **DigitalOcean**. [See More](https:
 ## 📸 Screenshots
 
 ### Home Page
-> Add screenshot here
 ![Home Page](./public/screenshots/Home.png)
 
 ### Mobile View
-> Add screenshot here
 ![Mobile View](./public/screenshots/Mobile.png)
 
 ---
