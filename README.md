@@ -1,12 +1,12 @@
 # Skerman Portfolio
 
-This is my personal portfolio website built with [Next.js](https://nextjs.org). It showcases my projects, skills, and experience as a Data Analyst / aspiring Data Engineer with a strong mathematical background.
+This is my personal portfolio website built with [Next.js](https://nextjs.org). It showcases my projects, skills, and experience as a developer with a strong mathematical background.
 
 ---
 
 ## 🚀 Live Site
 
-The site is currently deployed and hosted on **DigitalOcean**.
+The site is currently deployed and hosted on **DigitalOcean**. [See More](https://danielskerman.com)
 
 ---
 
@@ -14,8 +14,8 @@ The site is currently deployed and hosted on **DigitalOcean**.
 
 - Next.js (Pages Router)
 - React
-- JavaScript / TypeScript (if applicable)
-- CSS / Tailwind (if applicable)
+- JavaScript / TypeScript
+- CSS / Tailwind
 - Hosted on DigitalOcean
 
 ---
@@ -65,7 +65,7 @@ User → Domain → Nginx (reverse proxy) → Next.js application → DigitalOce
 ```text
                  ┌────────────────────┐
                  │      Domain        │
-                 │  (yourwebsite.com) │
+                 │(danielskerman.com) │
                  └─────────┬──────────┘
                            │
                            ▼
@@ -89,30 +89,6 @@ User → Domain → Nginx (reverse proxy) → Next.js application → DigitalOce
                  └────────────────────┘
 ```
 
-## ⚙️ Getting Started (Local Development)
-
-First, install dependencies:
-
-```bash
-npm install
-```
-
-Then run the development server:
-
-```bash
-npm run dev
-```
-
-Open http://localhost:3000 in your browser.
-
----
-
-## 📦 Deployment
-
-The application is deployed on a DigitalOcean VPS.
-
----
-
 ## 📁 Project Structure
 
 - `/pages` – application routes
@@ -126,5 +102,4 @@ The application is deployed on a DigitalOcean VPS.
 
 This project is actively being improved as part of my portfolio for data engineering roles. Future improvements may include:
 - Better SEO optimisation
-- Improved mobile UI polish
 - Additional project case studies
