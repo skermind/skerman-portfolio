@@ -61,7 +61,7 @@ export default function SidebarLayout({ children }) {
       {/* Sidebar */}
       <aside
         className={`
-          fixed md:sticky top-[57px] md:top-0 left-0 z-40 h-[calc(100vh-57px)] md:h-screen
+          fixed md:sticky top-[45px] md:top-0 left-0 z-40 h-[calc(100vh-57px)] md:h-screen
           transition-all duration-300 bg-[#11141c]
           flex flex-col gap-6 overflow-hidden border-r border-gray-700
           ${mobileMenuOpen ? "translate-x-0" : "-translate-x-full"}
