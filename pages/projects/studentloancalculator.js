@@ -30,10 +30,101 @@ export default function StudentLoanCalculatorInfo() {
             </h1>
           </div>
 
+          <div className="flex flex-wrap gap-4 mb-6">
+            <Link
+              href="https://github.com/skermind/student-loan-calculator"
+              className="text-[#1DB954] underline"
+            >
+              GitHub Repository
+            </Link>
+            <Link
+              href="https://studentloancalculator.danielskerman.com/"
+              className="text-[#1DB954] underline"
+            >
+              Live Site
+            </Link>
+          </div>
+
           <p className="mb-6">
-            This page is a placeholder for the full Student Loan Calculator
-            project write-up. I&apos;ll add architecture, calculations, and
-            implementation details soon.
+            A financial mathematics web application that helps users understand
+            the long-term cost of UK student loans and evaluate whether
+            voluntary overpayments are worth making.
+          </p>
+
+          <p className="mb-6">
+            I started by deriving analytical repayment formulas, validated the
+            logic in Excel, and then implemented a Python numerical solver with
+            an interactive web interface.
+          </p>
+
+          <h2 className="text-2xl font-semibold mb-3 text-[#1DB954]">
+            Methodology
+          </h2>
+          <ol className="list-decimal list-inside mb-6 space-y-2">
+            <li>
+              <strong>Analytical maths first:</strong> repayment logic and
+              payoff behaviour derived mathematically.
+            </li>
+            <li>
+              <strong>Excel prototyping:</strong> formulas validated against
+              interactions and edge cases.
+            </li>
+            <li>
+              <strong>Python numerical solver:</strong> year-by-year simulation
+              for flexible scenario analysis.
+            </li>
+          </ol>
+
+          <h2 className="text-2xl font-semibold mb-3 text-[#1DB954]">
+            Repayment Insights
+          </h2>
+          <ul className="list-disc list-inside mb-6 space-y-2">
+            <li>Baseline repayment path vs overpayment scenario comparison.</li>
+            <li>Highlights when overpaying clears debt sooner.</li>
+            <li>Shows total savings and cases where overpaying costs more.</li>
+          </ul>
+
+          <h2 className="text-2xl font-semibold mb-3 text-[#1DB954]">
+            Tech Stack
+          </h2>
+          <ul className="list-disc list-inside mb-6 space-y-2">
+            <li>Frontend: Next.js, React, TypeScript, Tailwind CSS</li>
+            <li>Backend: FastAPI, Python</li>
+            <li>Visualisation: Recharts, Chart.js</li>
+            <li>Infrastructure: Docker, Docker Compose, Nginx, DigitalOcean</li>
+          </ul>
+
+          <h2 className="text-2xl font-semibold mb-3 text-[#1DB954]">
+            Architecture
+          </h2>
+          <p className="mb-4">
+            Domain -&gt; Nginx (SSL + reverse proxy) -&gt; Next.js frontend -&gt;
+            FastAPI backend -&gt; JSON loan plan config + Python solver.
+          </p>
+
+          <h2 className="text-2xl font-semibold mb-3 text-[#1DB954]">
+            API Endpoints
+          </h2>
+          <ul className="list-disc list-inside mb-6 space-y-2">
+            <li>
+              <code>POST /calculate</code> - yearly repayment projection
+            </li>
+            <li>
+              <code>POST /calculate-summary</code> - aggregate totals
+            </li>
+            <li>
+              <code>POST /calculate-overpayment</code> - overpayment comparison
+            </li>
+          </ul>
+
+          <h2 className="text-2xl font-semibold mb-3 text-[#1DB954]">
+            Why I Built It
+          </h2>
+          <p className="mb-6">
+            The core question was: &quot;At what salary level does making
+            voluntary student loan overpayments become worthwhile?&quot; The app
+            is designed for transparent scenario analysis rather than claiming
+            to predict the future.
           </p>
 
           <h2 className="text-2xl font-semibold mb-3 text-[#1DB954]">
