@@ -40,7 +40,8 @@ export default function SidebarLayout({ children }) {
 ];
 
   const projectLinks = [
-    { href: "/projects/postertoplaylist", label: "PosterToPlaylist" }
+    { href: "/projects/postertoplaylist", label: "PosterToPlaylist" },
+    { href: "/projects/studentloancalculator", label: "Student Loan Calculator" }
   ];
 
   return (

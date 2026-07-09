@@ -28,6 +28,15 @@ export default function Projects() {
       image: "/images/PosterToPlaylist.png",
     },
     {
+      title: "Student Loan Calculator",
+      description: "A practical calculator to estimate UK student loan repayments.",
+      link: "/studentloancalculatorapp",
+      linkText: "Launch App",
+      moreInfo: "/projects/studentloancalculator",
+      moreInfoText: "More Info",
+      image: "/images/StudentLoanCalcuator.png",
+    },
+    {
       title: "Coming Soon",
       description: "Placeholder for my next project.",
       link: "#",
